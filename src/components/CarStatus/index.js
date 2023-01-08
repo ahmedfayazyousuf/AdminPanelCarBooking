@@ -56,7 +56,7 @@ function getSlots(){
 
                 if(doc.id === 'timeslot13_14'){
                     let row  = `<tr>
-                    <td>2 PM - 3 PM</td>
+                    <td>1 PM - 2 PM</td>
                     <td>${data.available}</td>
                     </tr>`;
                     let table = document.getElementById('table')
@@ -65,7 +65,7 @@ function getSlots(){
 
                 if(doc.id === 'timeslot14_15'){
                     let row  = `<tr>
-                    <td>3 PM - 4 PM</td>
+                    <td>2 PM - 3 PM</td>
                     <td>${data.available}</td>
                     </tr>`;
                     let table = document.getElementById('table')
@@ -74,7 +74,7 @@ function getSlots(){
 
                 if(doc.id === 'timeslot15_16'){
                     let row  = `<tr>
-                    <td>4 PM - 5 PM</td>
+                    <td>3 PM - 4 PM</td>
                     <td>${data.available}</td>
                     </tr>`;
                     let table = document.getElementById('table')
@@ -83,7 +83,7 @@ function getSlots(){
 
                 if(doc.id === 'timeslot16_17'){
                     let row  = `<tr>
-                    <td>5 PM - 6 PM</td>
+                    <td>4 PM - 5 PM</td>
                     <td>${data.available}</td>
                     </tr>`;
                     let table = document.getElementById('table')
@@ -92,7 +92,7 @@ function getSlots(){
 
                 if(doc.id === 'timeslot17_18'){
                     let row  = `<tr>
-                    <td>10 AM - 11 AM</td>
+                    <td>5 PM - 6 PM</td>
                     <td>${data.available}</td>
                     </tr>`;
                     let table = document.getElementById('table')
