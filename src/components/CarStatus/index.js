@@ -123,7 +123,6 @@ useEffect(()=>{
 
             <div style={{textAlign: 'center'}}>
                 <h1 style={{fontSize: '30px', color: 'black', marginTop: '15px', }}>Admin Panel</h1>
-                <h1 style={{fontSize: '20px', color: 'black', marginBottom: '20px'}}>Company & Model Name</h1>
             </div>
 
             <div style={{borderRadius: '20px'}}>
