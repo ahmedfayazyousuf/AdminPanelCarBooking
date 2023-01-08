@@ -6,8 +6,8 @@ body, html{
     overflow-x: hidden;
     height: 100vh;
 }
-html, body{
-    overflow-y: hidden;
+body{
+    overflow-y: scroll;
 }
 
 @font-face{
