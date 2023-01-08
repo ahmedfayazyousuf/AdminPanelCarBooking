@@ -184,7 +184,7 @@ var count = 0
             return;
         }
         
-    navigate('/User'+v, {state:{uid:location.state.uid,car:"Nissan",count:location.state.count}});
+    navigate('/User'+v, {state:{car:"Nissan"}});
     }
     
     return(

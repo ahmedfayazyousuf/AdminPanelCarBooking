@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/UserNissan" element={<UserNissan />} />
           <Route path="/UserInfiniti" element={<UserInfiniti />} />
 
-          <Route path="/carstatus" element={<CarStatus />} />
+          <Route path="/User/:id" element={<CarStatus />} />
           <Route path="/Success" element={<Success />} />
           <Route path="/Error" element={<Error />} />
 
