@@ -6,15 +6,15 @@ body, html{
     overflow-x: hidden;
     height: 100vh;
 }
-html{
-    overflow-y: scroll;
+html, body{
+    overflow-y: hidden;
 }
 
 @font-face{
     font-family: myFont;
     src:url(NissanBrand-Bold.ttf);
 }
- .explore{
+ .explore, thead{
     font-family: myFont;
 }
 
@@ -45,7 +45,7 @@ h1, p, a, .std{
     font-family: myFant;
     src:url(NissanBrand-Regular.ttf);
 }
-h1, p, a, label, input, button, value{
+h1, p, a, label, input, button, value, tbody{
     font-family: myFant;
 }
 
@@ -65,3 +65,13 @@ h1, p, a, label, input, button, value{
         flex-direction: column;
     }
 }
+
+table, td, th {
+    border: 1px solid;
+    border-radius: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
