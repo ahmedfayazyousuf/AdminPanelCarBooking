@@ -19,7 +19,7 @@ const UserChooseCompany = () => {
             return;
         }
         
-    // navigate(v, {state:{uid:location.state.uid,count:location.state.count}});
+    navigate(v);
     }
 
     function carClick(e){

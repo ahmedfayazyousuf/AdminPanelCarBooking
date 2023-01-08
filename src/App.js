@@ -9,7 +9,7 @@ import UserChooseCompany from './components/UserChooseCompany';
 
 import Success from './components/Success';
 import Error from './components/Error';
-import TimeSlot from './components/TimeSlot';
+import CarStatus from './components/CarStatus';
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/UserNissan" element={<UserNissan />} />
           <Route path="/UserInfiniti" element={<UserInfiniti />} />
 
-          <Route path="/User/:id" element={<TimeSlot />} />
+          <Route path="/carstatus" element={<CarStatus />} />
           <Route path="/Success" element={<Success />} />
           <Route path="/Error" element={<Error />} />
 
