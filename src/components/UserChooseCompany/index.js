@@ -79,8 +79,8 @@ const UserChooseCompany = () => {
                 
             </div>
 
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'3vh'}} >
-                <button className="grab" style={{color:"white", background:"black",width:"150px",borderRadius: '5px', padding: '10px', marginBottom: '60px'}} variant="contained" onClick= {() => Handleclick(car)}>Next</button> 
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'3vh', marginBottom: '120px'}} >
+                <button className="grab" style={{color:"white", background:"black",width:"150px",borderRadius: '5px', padding: '10px', marginBottom: '120px'}} variant="contained" onClick= {() => Handleclick(car)}>Next</button> 
             </div>
 
               

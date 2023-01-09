@@ -303,6 +303,9 @@ var count = 0
                         <p style={{fontSize: '10px'}}>QX60</p>
                     </div>
                 </div>
+            </div>
+
+            <div className="rower" style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0'}} >
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
                     <div id='QX55' className="content content-1" onClick={()=>{carClick('QX55')}} style={{padding: '0', margin: '10px'}}>
@@ -313,11 +316,7 @@ var count = 0
                         <p style={{fontSize: '10px'}}>QX55</p>
                     </div>
                 </div>
-                
-            </div>
 
-            <div className="rower" style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0'}} >
-    
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', padding: '0', margin: '0'}}>
                     <div id='Q60' className="content content-1" onClick={()=>{carClick('Q60')}} style={{padding: '0', margin: '10px'}}>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
@@ -327,6 +326,10 @@ var count = 0
                         <p style={{fontSize: '10px'}}>Q60</p>
                     </div>
                 </div>
+                
+            </div>
+
+            <div className="rower" style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0'}} >
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='Q50' className="content content-1" onClick={()=>{carClick('Q50')}} style={{padding: '0', margin: '10px'}}>

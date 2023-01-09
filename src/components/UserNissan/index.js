@@ -380,7 +380,9 @@ var count = 0
                         <p style={{fontSize: '10px'}}>PATROL</p>
                     </div>
                 </div>
-
+            </div>
+            
+            <div className='rower' style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0'}} >
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
                     <div id='Pathfinder' className="content content-1" onClick={()=>{carClick('Pathfinder')}} style={{padding: '0', margin: '10px'}}>
                     <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
@@ -424,7 +426,9 @@ var count = 0
                         <p style={{fontSize: '10px'}}>NISSAN NISMO 370Z</p>
                     </div>
                 </div>
+            </div>
 
+            <div className='rower' style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0'}} >
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='Maxima' className="content content-1" onClick={()=>{carClick('Maxima')}} style={{padding: '0', margin: '10px'}}>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
