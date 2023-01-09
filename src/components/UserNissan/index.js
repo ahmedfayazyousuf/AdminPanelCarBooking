@@ -68,6 +68,27 @@ var count = 0
         getCars();
 
         count++;
+
+
+        const Location = firebase.firestore().collection("Cars").doc('Nissan').collection('models').doc(`Altima`).collection('timeslot').get().then((docs)=>{
+            var sum = 0;
+            var count = 0;
+            docs.forEach((doc,index)=>{
+                count++;
+
+                if(count === 9){
+                    return;
+                }
+                console.log(doc.data().available)
+              
+                sum += doc.data().available;
+            })
+            console.log(sum);
+        });
+
+
+
+
         // eslint-disable-next-line
     },[])
 
