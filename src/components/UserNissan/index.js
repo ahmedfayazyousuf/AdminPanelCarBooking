@@ -22,6 +22,17 @@ const UserNissan= () => {
     const [user, setUser] = useState([])
     // eslint-disable-next-line
     const [file, setFile] = useState("");
+
+    const [altima, setAltima] = useState(0);
+
+    const [kicks, setKicks] = useState(0);
+
+    const [pathfinder, setPathfinder] = useState(0);
+    const [patrol, setPatrol] = useState(0);
+    const [xtrail, setXtrail] = useState(0);
+    const [z, setZ] = useState(0);
+    const [nismoz, setNismoz] = useState(0);
+    const [maxima, setMaxima] = useState(0);
     // eslint-disable-next-line
     const [userID, setUserID] = useState([])
     // eslint-disable-next-line
@@ -50,10 +61,12 @@ var count = 0
 
         const Location = firebase.firestore().collection("Cars").doc('Nissan');
     // eslint-disable-next-line
-    const Cars = Location.collection('models').get().then((querySnapshot) => {
+     Location.collection('models').get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         setUser(current => [...current, doc.data()]);
     });
+
+
 
 
     })
@@ -84,6 +97,129 @@ var count = 0
                 sum += doc.data().available;
             })
             console.log(sum);
+            setAltima(sum)
+        });
+
+        const time = firebase.firestore().collection("Cars").doc('Nissan').collection('models')
+
+        time.doc(`Kicks`).collection('timeslot').get().then((docs)=>{
+            var sum = 0;
+            var count = 0;
+            docs.forEach((doc,index)=>{
+                count++;
+
+                if(count === 9){
+                    return;
+                }
+                console.log(doc.data().available)
+              
+                sum += doc.data().available;
+            })
+            console.log(sum,kicks);
+            setKicks(sum)
+        });
+
+        time.doc(`Maxima`).collection('timeslot').get().then((docs)=>{
+            var sum = 0;
+            var count = 0;
+            docs.forEach((doc,index)=>{
+                count++;
+
+                if(count === 9){
+                    return;
+                }
+                console.log(doc.data().available)
+              
+                sum += doc.data().available;
+            })
+            console.log(sum,kicks);
+            setMaxima(sum)
+        });
+
+        time.doc(`Z`).collection('timeslot').get().then((docs)=>{
+            var sum = 0;
+            var count = 0;
+            docs.forEach((doc,index)=>{
+                count++;
+
+                if(count === 9){
+                    return;
+                }
+                console.log(doc.data().available)
+              
+                sum += doc.data().available;
+            })
+            console.log(sum,kicks);
+            setZ(sum)
+        });
+
+        time.doc(`Nismo370z`).collection('timeslot').get().then((docs)=>{
+            var sum = 0;
+            var count = 0;
+            docs.forEach((doc,index)=>{
+                count++;
+
+                if(count === 9){
+                    return;
+                }
+                console.log(doc.data().available)
+              
+                sum += doc.data().available;
+                
+            })
+            console.log(sum,kicks);
+            setNismoz(sum)
+        });
+
+        time.doc(`Pathfinder`).collection('timeslot').get().then((docs)=>{
+            var sum = 0;
+            var count = 0;
+            docs.forEach((doc,index)=>{
+                count++;
+
+                if(count === 9){
+                    return;
+                }
+                console.log(doc.data().available)
+              
+                sum += doc.data().available;
+            })
+            console.log(sum,kicks);
+            setPathfinder(sum)
+        });
+
+        time.doc(`Patrol`).collection('timeslot').get().then((docs)=>{
+            var sum = 0;
+            var count = 0;
+            docs.forEach((doc,index)=>{
+                count++;
+
+                if(count === 9){
+                    return;
+                }
+                console.log(doc.data().available)
+              
+                sum += doc.data().available;
+            })
+            console.log(sum,kicks);
+            setPatrol(sum)
+        });
+
+        time.doc(`Xtrail`).collection('timeslot').get().then((docs)=>{
+            var sum = 0;
+            var count = 0;
+            docs.forEach((doc,index)=>{
+                count++;
+
+                if(count === 9){
+                    return;
+                }
+                console.log(doc.data().available)
+              
+                sum += doc.data().available;
+            })
+            console.log(sum,kicks);
+            setXtrail(sum)
         });
 
 
@@ -227,6 +363,9 @@ var count = 0
     
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end'}}>
                     <div id='Altima' className="content content-1" onClick={()=>{carClick('Altima')}} style={{padding: '0', margin: '10px'}}>
+                        <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
+                            <p style={{fontSize: '20px', fontWeight: '900'}}>{altima}</p>
+                        </div>
                         <img src={Altima} alt="Logo" style={{width: '20vh'}}/>
                         <p style={{fontSize: '10px'}}>ALTIMA 2023</p>
                     </div>
@@ -234,6 +373,9 @@ var count = 0
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
                     <div id='Patrol' className="content content-1" onClick={()=>{carClick('Patrol')}} style={{padding: '0', margin: '10px'}}>
+                    <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
+                            <p style={{fontSize: '20px', fontWeight: '900'}}>{patrol}</p>
+                        </div>
                         <img src={Patrol} alt="Logo" style={{width: '20vh'}}/>  
                         <p style={{fontSize: '10px'}}>PATROL</p>
                     </div>
@@ -241,6 +383,9 @@ var count = 0
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
                     <div id='Pathfinder' className="content content-1" onClick={()=>{carClick('Pathfinder')}} style={{padding: '0', margin: '10px'}}>
+                    <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
+                            <p style={{fontSize: '20px', fontWeight: '900'}}>{pathfinder}</p>
+                        </div>
                         <img src={Pathfinder} alt="Logo" style={{width: '20vh'}}/>  
                         <p style={{fontSize: '10px'}}>PATHFINDER</p>
                     </div>
@@ -248,6 +393,9 @@ var count = 0
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
                     <div id='NissanZ' className="content content-1" onClick={()=>{carClick('NissanZ')}} style={{padding: '0', margin: '10px'}}>
+                        <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
+                            <p style={{fontSize: '20px', fontWeight: '900'}}>{z}</p>
+                        </div>
                         <img src={NissanZ} alt="Logo" style={{width: '20vh'}}/>  
                         <p style={{fontSize: '10px'}}>NISSAN Z</p>
                     </div>
@@ -259,6 +407,9 @@ var count = 0
     
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', padding: '0', margin: '0'}}>
                     <div id='Xtrail' className="content content-1" onClick={()=>{carClick('Xtrail')}} style={{padding: '0', margin: '10px'}}>
+                        <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
+                            <p style={{fontSize: '20px', fontWeight: '900'}}>{xtrail}</p>
+                        </div>
                         <img src={Xtrail} alt="Logo" style={{width: '20vh'}}/>
                         <p style={{fontSize: '10px'}}>XTRAIL 2023</p>
                     </div>
@@ -266,6 +417,9 @@ var count = 0
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='Nismo_370z' className="content content-1" onClick={()=>{carClick('Nismo_370z')}} style={{padding: '0', margin: '10px'}}>
+                        <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
+                            <p style={{fontSize: '20px', fontWeight: '900'}}>{nismoz}</p>
+                        </div>
                         <img src={Nismo_370z} alt="Logo" style={{width: '20vh'}}/>  
                         <p style={{fontSize: '10px'}}>NISSAN NISMO 370Z</p>
                     </div>
@@ -273,6 +427,9 @@ var count = 0
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='Maxima' className="content content-1" onClick={()=>{carClick('Maxima')}} style={{padding: '0', margin: '10px'}}>
+                        <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
+                            <p style={{fontSize: '20px', fontWeight: '900'}}>{maxima}</p>
+                        </div>
                         <img src={Maxima} alt="Logo" style={{width: '20vh'}}/>  
                         <p style={{fontSize: '10px'}}>MAXIMA</p>
                     </div>
@@ -280,6 +437,9 @@ var count = 0
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='Kicks' className="content content-1" onClick={()=>{carClick('Kicks')}} style={{padding: '0', margin: '10px'}}>
+                        <div style={{ width: '100%', display: 'flex', justifyContent: 'right', paddingRight: '20px'}}>
+                            <p style={{fontSize: '20px', fontWeight: '900'}}>{kicks}</p>
+                        </div>
                         <img src={Kicks} alt="Logo" style={{width: '20vh'}}/>  
                         <p style={{fontSize: '10px'}}>KICKS</p>
                     </div>
