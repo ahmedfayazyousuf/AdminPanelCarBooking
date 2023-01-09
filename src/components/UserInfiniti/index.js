@@ -279,7 +279,7 @@ var count = 0
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', marginTop:'40px', marginBottom:'15px', padding: '0'}} >
-                <p>Please select a car to test drive</p>
+                <p>Please select a car</p>
             </div>  
 
             <div className="rower" style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0'}} >
